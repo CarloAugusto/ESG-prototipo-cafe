@@ -14,9 +14,9 @@ O protótipo utiliza **dados simulados** e indicadores-chave de desempenho (**KP
    
 ---
 
-## 🌱 Introdução — Problema e Motivação
+## 🌱 Introdução | Problema e Motivação
 
-A cafeicultura brasileira enfrenta **desafios recorrentes** como perda de solo, compactação, baixa infiltração de água, escorrimento superficial e redução da matéria orgânica. Esses fatores comprometem **produtividade, estabilidade do sistema e resiliência climática**.
+A cafeicultura brasileira enfrenta **desafios** como perda de solo, compactação, baixa infiltração de água, escorrimento superficial e redução da matéria orgânica. Esses fatores comprometem **produtividade, estabilidade do sistema e resiliência climática**.
 
 A **agricultura regenerativa** surge como resposta, promovendo práticas que restauram a saúde do solo e alinham a produção com os princípios **ESG** (Environmental, Social, Governance). A iniciativa está em sintonia com o **Pacto Global da ONU (Agenda 2030)**, especialmente com os Objetivos de Desenvolvimento Sustentável:
 
