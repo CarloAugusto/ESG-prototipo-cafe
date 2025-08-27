@@ -1,4 +1,4 @@
-# Café Regenerativo — Protótipo ESG 
+# Café Regenerativo | Protótipo ESG 
 
 O protótipo está disponível em Hugging Face Spaces:
 
