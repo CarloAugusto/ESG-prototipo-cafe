@@ -75,6 +75,8 @@ import pandas as pd
 df = pd.read_csv("data/dados_cafe.csv")
 print(df.head())
 
+```
+
 > **Nota**  
 > Estes dados são **totalmente simulados**.  
 > Eles **não representam valores reais** de produtividade ou emissões da cafeicultura, e têm apenas caráter **educacional e de prototipagem ESG**.
