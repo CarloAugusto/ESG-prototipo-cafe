@@ -1,0 +1,274 @@
+/* ---------------------------------------------------------
+   Paleta e variáveis globais
+--------------------------------------------------------- */
+:root {
+  --bg-start: #0e1117;
+  --bg-end:   #1a1d25;
+  --card:     #1e222d;
+  --card-hover: #2a2f3d;
+  --accent:   #58D68D;   /* verde */
+  --accent2:  #5DADE2;   /* azul */
+  --text:     #EDEDED;
+  --muted:    #B8B8C2;
+}
+
+/* ---------------------------------------------------------
+   Fundo e tipografia
+--------------------------------------------------------- */
+html, body {
+  background: linear-gradient(160deg, var(--bg-start) 0%, var(--bg-end) 100%);
+  color: var(--text);
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+}
+
+/* ---------------------------------------------------------
+   Cabeçalhos
+--------------------------------------------------------- */
+.app-title {
+  font-weight: 700;
+  letter-spacing: .3px;
+  margin: 0;
+}
+.app-subtitle {
+  text-align: right;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: .25rem;
+}
+
+/* ---------------------------------------------------------
+   Cards e containers
+--------------------------------------------------------- */
+.card, .dbc {
+  background: var(--card) !important;
+  border: 1px solid #2b2f3a !important;
+  border-radius: 14px !important;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+.card:hover {
+  background: var(--card-hover) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 0 8px rgba(88,214,141,0.5),   /* verde mais suave */
+              0 0 14px rgba(93,173,226,0.4); /* azul mais suave */
+
+}
+.card .card-header {
+  background: transparent !important;
+  border-bottom: 1px solid #2b2f3a !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: .5rem .75rem !important;
+}
+.card .card-body {
+  padding: .75rem !important;
+}
+
+/* ---------------------------------------------------------
+   KPI Cards (mini)
+--------------------------------------------------------- */
+.kpi-card.mini {
+  min-height: 110px;
+}
+.kpi-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.kpi-legend {
+  font-size: .8rem;
+  color: var(--muted);
+}
+.kpi-value {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+.kpi-diff {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* ---------------------------------------------------------
+   Inputs (Dropdowns, Radio)
+--------------------------------------------------------- */
+.dropdown .Select-control,
+.Select-menu-outer {
+  background: var(--card);
+  color: var(--text);
+}
+.dropdown .Select-value-label {
+  color: var(--text) !important;
+}
+.radio .form-check-label {
+  margin-right: 14px;
+}
+
+/* ---------------------------------------------------------
+   Plotly charts
+--------------------------------------------------------- */
+.js-plotly-plot .plotly .modebar {
+  display: none; /* remove toolbar */
+}
+
+/* ---------------------------------------------------------
+   Tabelas
+--------------------------------------------------------- */
+.dash-table-container .row { margin: 0; }
+.dash-table-container {
+  max-height: 420px;
+  overflow-y: auto;
+}
+.dash-table-container th {
+  background-color: #111 !important;
+  color: #eee !important;
+  font-weight: 600;
+}
+.dash-table-container td {
+  padding: 6px;
+  font-size: 14px;
+  background-color: #1c1f27 !important;
+  color: #e0e0e0 !important;
+  border: none !important;
+}
+
+/* ---------------------------------------------------------
+   Ajustes de espaçamento
+--------------------------------------------------------- */
+.tight .row {
+  --bs-gutter-x: .5rem;
+  --bs-gutter-y: .5rem;
+}
+hr { margin: .5rem 0 !important; }
+
+/* -------------------------------------------------------
+Ajuste dos Dropdowns e Checklist nos CardHeaders 
+---------------------------------------------------------*/
+.card .card-header { padding: 0.60rem 0.60rem !important; /*controla o espaço interno do header (em cima/baixo e lados).*/
+	min-height: 55px; /*força todos os headers a terem pelo menos 36px de altura.*/ 
+	display: flex; 
+	align-items: center; }
+
+/* A classe dd-compact reduz a altura do dcc.Dropdown */
+
+.dd-compact .Select-control {
+  border: none !important;        /* remove borda */
+  box-shadow: none !important;    /* remove sombra */
+  background-color: #1e1e1e !important;  /* fundo igual ao card */
+  padding: 0 10px !important;     /* menos espaço horizontal */
+  min-height: 20px !important;   /* menor altura */
+  height: 20px !important;
+}
+
+.dd-compact .Select--single,
+
+.dd-compact .Select-value,
+
+.dd-compact .Select-placeholder,
+
+.dd-compact .Select-input,
+
+.dd-compact .Select-value-label {
+  color: #EDEDED !important;   /* cor da letra (ex: cinza claro) */
+  font-weight: 500;            /* peso da fonte */
+  font-size: 0.9rem;           /* tamanho da letra */
+}
+
+/* Evita que o menu “estoure” visualmente */
+.dd-compact .Select-menu-outer {
+  max-height: 220px;        /* rolagem se houver muitas opções */
+  border-radius: 8px;
+}
+
+/*-------------------------------------------------*/
+.section-separator {
+  margin-top: 30px;  /* espaço antes */
+  margin-bottom: 50px; /* espaço depois */
+}
+/*---------------------------------------------------*/
+/* Header fixo no topo */
+#header-row {
+  position: sticky;
+  top: 0;
+  z-index: 1000;           /* garante que fica acima dos gráficos */
+  background: linear-gradient(160deg, var(--bg-start) 0%, var(--bg-end) 100%);
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #2b2f3a;
+}
+
+/*---------------------------------------------------*/
+/* Hero section */
+.hero-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;         /* tamanho equilibrado */
+  line-height: 1.1;        /* altura da linha */
+  margin-top: 1.5rem;      /* espaçamento superior */
+  margin-bottom: 4rem;   /* espaçamento inferior */
+  font-weight: 400;
+}
+
+.hero-strong {
+  color: rgba(237, 237, 237, 0.9); /* mesmo tom de EDEDED, mas 90% */   
+  font-weight: 500;        /* mais destacado */
+}
+
+.hero-muted {
+  color: rgba(255, 255, 255, 0.5); /* cinza translúcido */
+  font-weight: 400;
+}
+
+.hero-row {
+  padding: 0.5rem 0.75rem;         /* igual ao header */
+  margin-left: 0;               /* garante alinhamento */
+  margin-right: 0;
+}
+/*---------------------- TIPOGRAFIA --------------------------------*/
+/* Importando Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@200;300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,500&family=DM+Serif+Display:ital@0;1&display=swap');
+
+/* Header principal */
+.app-title {
+  font-family: 'DM Serif Display', serif; /* ou 'Cormorant Garamond', serif; ou 'Playfair Display', serif */
+  font-weight: 400;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: baseline;
+  gap: .4rem;
+  margin: 0;
+}
+
+/* Parte "Café" em Playfair */
+.app-title .cafe {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-right: .4rem;
+  color: var(--text);
+}
+
+/* Subtítulo */
+.app-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  text-align: right;
+  color: var(--muted);
+}
+
+/*------------------FOOTER-----------------*/
+.app-footer {
+  font-family: 'Playfair Display', serif; 
+  font-size: 0.85rem;                 /* menor que o subtítulo */
+  color: var(--muted);                /* cinza suave */
+  text-align: center;                 /* centralizado no rodapé */
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.footer-email {
+  font-style: italic;
+}
