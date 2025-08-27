@@ -78,8 +78,6 @@ Uma das práticas centrais da agricultura regenerativa é a **cobertura vegetal 
   - Comparar sistemas convencional vs regenerativo
   - Explorar dados em gráficos dinâmicos
   - Benchmarking de indicadores
-    
-<img width="1349" height="583" alt="image" src="https://github.com/user-attachments/assets/f8cc29dd-6d23-4932-8cca-c407d0833c0b" />
 
 ---
 
