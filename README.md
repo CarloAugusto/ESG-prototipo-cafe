@@ -32,7 +32,7 @@ Além disso, normas como **ISO 14001 (Gestão Ambiental)**, **ISO 14064 (Invent�
 
 ---
 
-### 1) Escopo do protótipo | Cobertura vegetal entre linhas de café
+## 1) Escopo do protótipo | Cobertura vegetal entre linhas de café
 
 Uma das práticas centrais da agricultura regenerativa é a **cobertura vegetal entre as ruas de café**, que pode incluir diferentes espécies forrageiras e de adubação verde, como:
 
@@ -50,7 +50,7 @@ Uma das práticas centrais da agricultura regenerativa é a **cobertura vegetal 
 
 ---
 
-### 2) Principais benefícios
+## 2) Principais benefícios
 
 - 🌧️ **Proteção do solo** contra impacto direto da chuva e insolação  
 - 💧 **Maior infiltração e retenção de umidade útil**  
@@ -81,7 +81,7 @@ Uma das práticas centrais da agricultura regenerativa é a **cobertura vegetal 
 
 ---
 
-## Ferramentas
+## 4) Ferramentas
 
 - **Python 3.12+**
 - [Dash](https://dash.plotly.com/) (Plotly)
@@ -93,14 +93,25 @@ Uma das práticas centrais da agricultura regenerativa é a **cobertura vegetal 
 
 ---
 
-## 📂 Estrutura do Repositório
+## 5) Estrutura do Repositório
 
 ```text
-regenera-cafe-prototipo/
- ├── app.py              # Código principal do dashboard
- ├── dados_cafe.csv      # Base de dados simulada
- ├── style.css           # Estilos e tipografia customizada
- ├── README.md           # Documentação principal
- └── requirements.txt    # Dependências do projeto
+ESG-prototipo-cafe/
+├── data/                       # Conjunto de dados simulados
+│   └── dados_cafe.csv
+│
+├── docs/                       # Scripts principais e documentação
+│   ├── simulacao_cafe.py       # Script de simulação da base de dados
+│   ├── app.py                  # Dashboard interativo (Dash/Plotly)
+│   ├── README.md               # Documentação da pasta docs
+│   └── assets/                 # Recursos estáticos do dashboard
+│       ├── style.css           # Estilos e tipografia customizada
+│       └── README.md           # Explicação dos estilos (CSS)
+│
+├── requirements.txt            # Dependências do projeto
+├── LICENSE                     # Licença do repositório (MIT)
+├── .gitignore                  # Arquivos ignorados pelo Git
+└── README.md                   # Documentação principal do projeto
+
 
 
