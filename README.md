@@ -1,4 +1,6 @@
-# Café Regenerativo — Protótipo ESG 
+# Café Regenerativo | Protótipo ESG 
+
+O protótipo parte de um problema real da cafeicultura (erosão, baixa infiltração e perda de produtividade) e demonstra uma solução simulada via práticas de agricultura regenerativa (cobertura vegetal entre linhas), avaliando impactos em indicadores econômicos e ambientais.
 
 O protótipo está disponível em Hugging Face Spaces:
 
@@ -8,15 +10,16 @@ Este repositório apresenta um **dashboard interativo em Python/Dash** para aná
 
 O protótipo utiliza **dados simulados** e indicadores-chave de desempenho (**KPIs**) para ilustrar como práticas de agricultura regenerativa podem gerar ganhos em **sustentabilidade, eficiência de recursos e rentabilidade** — em alinhamento às diretrizes ESG e ao Pacto Global 2030.
 
+**Objetivos Gerais:**
 1. Apoiar produtores e empresas no monitoramento ESG.
 2. Traduzir dados ambientais em métricas econômicas comparáveis.
 3. Apoiar a transição para cadeias de suprimento mais sustentáveis.
    
 ---
 
-## 🌱 Introdução — Problema e Motivação
+## Introdução | Problema e Motivação
 
-A cafeicultura brasileira enfrenta **desafios recorrentes** como perda de solo, compactação, baixa infiltração de água, escorrimento superficial e redução da matéria orgânica. Esses fatores comprometem **produtividade, estabilidade do sistema e resiliência climática**.
+A cafeicultura brasileira enfrenta **desafios** como perda de solo, compactação, baixa infiltração de água, escorrimento superficial e redução da matéria orgânica. Esses fatores comprometem **produtividade, estabilidade do sistema e resiliência climática**.
 
 A **agricultura regenerativa** surge como resposta, promovendo práticas que restauram a saúde do solo e alinham a produção com os princípios **ESG** (Environmental, Social, Governance). A iniciativa está em sintonia com o **Pacto Global da ONU (Agenda 2030)**, especialmente com os Objetivos de Desenvolvimento Sustentável:
 
@@ -29,7 +32,7 @@ Além disso, normas como **ISO 14001 (Gestão Ambiental)**, **ISO 14064 (Invent�
 
 ---
 
-### 🌾 Cobertura vegetal entre linhas de café
+## 1) Escopo do protótipo | Cobertura vegetal entre linhas de café
 
 Uma das práticas centrais da agricultura regenerativa é a **cobertura vegetal entre as ruas de café**, que pode incluir diferentes espécies forrageiras e de adubação verde, como:
 
@@ -47,7 +50,7 @@ Uma das práticas centrais da agricultura regenerativa é a **cobertura vegetal 
 
 ---
 
-### 🌍 Principais benefícios
+## 2) Principais benefícios
 
 - 🌧️ **Proteção do solo** contra impacto direto da chuva e insolação  
 - 💧 **Maior infiltração e retenção de umidade útil**  
@@ -59,7 +62,7 @@ Uma das práticas centrais da agricultura regenerativa é a **cobertura vegetal 
 ---
 
 
-## Objetivos do Protótipo
+## 3) Objetivos do Protótipo
 
 - Demonstrar como boas práticas de **cobertura vegetal entre linhas de café** influenciam:
   - Produtividade
@@ -75,12 +78,10 @@ Uma das práticas centrais da agricultura regenerativa é a **cobertura vegetal 
   - Comparar sistemas convencional vs regenerativo
   - Explorar dados em gráficos dinâmicos
   - Benchmarking de indicadores
-    
-<img width="1349" height="583" alt="image" src="https://github.com/user-attachments/assets/f8cc29dd-6d23-4932-8cca-c407d0833c0b" />
 
 ---
 
-## Ferramentas
+## 4) Ferramentas
 
 - **Python 3.12+**
 - [Dash](https://dash.plotly.com/) (Plotly)
@@ -92,14 +93,25 @@ Uma das práticas centrais da agricultura regenerativa é a **cobertura vegetal 
 
 ---
 
-## 📂 Estrutura do Repositório
+## 5) Estrutura do Repositório
 
 ```text
-regenera-cafe-prototipo/
- ├── app.py              # Código principal do dashboard
- ├── dados_cafe.csv      # Base de dados simulada
- ├── style.css           # Estilos e tipografia customizada
- ├── README.md           # Documentação principal
- └── requirements.txt    # Dependências do projeto
+ESG-prototipo-cafe/
+├── data/                       # Conjunto de dados simulados
+│   └── dados_cafe.csv
+│
+├── docs/                       # Scripts principais e documentação
+│   ├── simulacao_cafe.py       # Script de simulação da base de dados
+│   ├── app.py                  # Dashboard interativo (Dash/Plotly)
+│   ├── README.md               # Documentação da pasta docs
+│   └── assets/                 # Recursos estáticos do dashboard
+│       ├── style.css           # Estilos e tipografia customizada
+│       └── README.md           # Explicação dos estilos (CSS)
+│
+├── requirements.txt            # Dependências do projeto
+├── LICENSE                     # Licença do repositório (MIT)
+├── .gitignore                  # Arquivos ignorados pelo Git
+└── README.md                   # Documentação principal do projeto
+
 
 
